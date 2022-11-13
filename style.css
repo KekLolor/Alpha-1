@@ -6,10 +6,19 @@
     font-size: 32px;
 }
 
+@font-face{
+    font-family: 'Sanes';
+    font-style: normal;
+    font-weight: 300;
+    src: url(s/Comfortaa/v40/Comic Sans MS.ttf)format('truetype')
+
+}
+
 body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Sanes;
     min-height: 100vh;
     background: linear-gradient(to bottom right, #840e9a, #43074e)
 }
@@ -17,6 +26,11 @@ body{
 ul{
     position: relative;
     transform: skewY(-15deg)
+}
+ul.second{
+    position: relative;
+    transform: skewY(-15deg);
+    left: 15vh;
 }
 
 ul li{
@@ -27,6 +41,16 @@ ul li{
     padding: 15px;
     z-index: var(--i);
     transition: .5s
+}
+
+ul li img {
+    position:absolute;
+    left: -41px;
+    bottom: 4px;
+    width: 41px;
+    height: 55px;
+    transform-origin: right;
+    transform: skewY(45deg)
 }
 
 ul li:hover{
@@ -119,3 +143,6 @@ ul li:hover a {
 ul li:last-child::after{
     box-shadow: -100px 100px 20px rgb(10,10,10,.25)
 }
+
+
+
